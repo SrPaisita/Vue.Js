@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app">
+    </div>
+    <script>
+        const vm = Vue.createApp({
+            data() {
+                return {
+                    img: "https://fastly.picsum.photos/id/269/200/300.jpg?hmac=3bslnrdmLgmcyTAWbxcbaG1-8CQ1XS0z2jWEi25pSrE",
+                    alt: "Imagen"
+                };
+            },
+            template: `<img :src="img" :alt="alt">`
+        }).mount("#app");
+    </script>
+</body>
+</html>
